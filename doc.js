@@ -11,10 +11,20 @@ export default function getUser(data) {
         let h3=document.createElement("h3")
         h3.innerHTML=el.age
 
+        let img =document.createElement("img")
+        img.src=el.avatar
+        img.style.width="200px"
+
+
         let pStatus=document.createElement("p")
         pStatus.innerHTML=el.status?"Active":"Inactive"
 
-        div.append(h1,h3,pStatus)
+
+        let btnDelet=document.createElement("button")
+        btnDelet.innerHTML="DELETE"
+        
+
+        div.append(img,h1,h3,pStatus,btnDelet)
         box.append(div)
     })
 }
